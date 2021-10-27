@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Categories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "cms": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "portfolios": {
+      "collection": "portfolio",
+      "via": "categories",
+      "dominant": true
+    },
+    "stack": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}
